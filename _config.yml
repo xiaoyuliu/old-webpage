@@ -33,15 +33,15 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: https://www.facebook.com/xiaoyu.liu.353803
+facebook: xiaoyu.liu.353803
 # twitter: mytwitter
 # google: mygoogle
-instagram: https://www.instagram.com/bigmissfish/?hl=en
+instagram: bigmissfish/?hl=en
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: https://github.com/xiaoyuliu
+github: xiaoyuliu
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username

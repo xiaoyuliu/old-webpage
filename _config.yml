@@ -15,7 +15,7 @@ resume: false
 resume-external: false
 resume-url: https://google.com/?q=my+resume
 
-url: https://xiaoyuliu.github.io
+url: https://xiaoyuliu.github.io/personal_website
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -41,7 +41,7 @@ instagram: https://www.instagram.com/bigmissfish/?hl=en
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
+github: https://github.com/xiaoyuliu
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username

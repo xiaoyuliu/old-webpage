@@ -1,9 +1,9 @@
 # main text of home
-name: John Doe
-bio: A Man who travels the world eating noodles
+name: Xiaoyu Liu
+bio: Computer Science thesis-based master @ Simon Fraser University
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: Work, life clips
 
 # if it's an external image, update below for true
 # better with square images
@@ -16,7 +16,7 @@ resume: true
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://koppl.in/indigo
+url: https://xiaoyuliu.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -34,10 +34,10 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+facebook: https://www.facebook.com/xiaoyu.liu.353803
+# twitter: mytwitter
 # google: mygoogle
-# instagram: myinstagram
+instagram: https://www.instagram.com/bigmissfish/?hl=en
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
@@ -46,9 +46,9 @@ github: mygithub
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
+# medium: medium
 # vimeo: myvimeo
-email: myemail@gmail.com
+email: xiaoyuliu1993 [at] gmail.com
 
 authors:
     johndoe:

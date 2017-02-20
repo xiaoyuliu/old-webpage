@@ -62,6 +62,11 @@ authors:
         external-image: false
         picture: assets/images/james.jpg
         twitter: jamesfoster
+    xiaoyuliu:
+        name: Xiaoyu Liu
+        bio: "O ever youthful, O ever weeping"
+        external-image: false
+        picture: assets/images/xiaoyu.jpg
  
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal

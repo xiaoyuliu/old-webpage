@@ -8,7 +8,6 @@ tag:
 - markdown
 - elements
 star: true
-category: blog
 description: Markdown summary with different options
 ---
 

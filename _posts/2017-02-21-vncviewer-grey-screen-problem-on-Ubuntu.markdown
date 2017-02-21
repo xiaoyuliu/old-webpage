@@ -1,7 +1,7 @@
 ---
 title: "Solve grey screen and X pointer problem of vncviewer on Ubuntu"
 author: xiaoyuliu
-date: Tue Feb 21 13:49:46 2017
+date: 2017-02-21 13:49
 layout: post
 category: blog
 description: VNCviewer grey screen problem solution on Ubuntu

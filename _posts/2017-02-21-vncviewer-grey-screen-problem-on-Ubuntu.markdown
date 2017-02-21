@@ -1,13 +1,13 @@
 ---
 title: "Solve grey screen and X pointer problem of vncviewer on Ubuntu"
-author: xiaoyuliu
-date: 2017-02-21 13:49
 layout: post
-category: blog
+date: 2017-02-21 13:49
+author: xiaoyuliu
 description: VNCviewer grey screen problem solution on Ubuntu
-tags:
-- Ubuntu
+tag:
+- ubuntu
 - vnc
+category: blog
 ---
 
 After setting up successfully the vncserver on your Ubuntu machine, a common problem is the grey screen and "X" pointer in vncviewer.

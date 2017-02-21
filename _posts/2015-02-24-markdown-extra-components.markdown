@@ -1,7 +1,7 @@
 ---
 title: "Markdown Extra Components"
 layout: post
-date: 2016-02-24 22:48
+date: Tue Feb 21 15:50:58 2017
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

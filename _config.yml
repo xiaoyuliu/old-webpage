@@ -8,14 +8,14 @@ description: Work, life clips
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: xiaoyuliu.github.io／assets/images/xiaoyu.jpg
+picture: assets/images/xiaoyu.jpg
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: false
 resume-external: false
 resume-url: https://google.com/?q=my+resume
 
-url: https://xiaoyuliu.github.io/personal_website
+url: https://xiaoyuliu.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/

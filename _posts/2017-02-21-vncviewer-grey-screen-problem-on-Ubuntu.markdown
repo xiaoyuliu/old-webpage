@@ -28,7 +28,7 @@ This problem is caused by there is no desktop running while running the vncserve
     x-window-manager &
     mate-session &
 
-At last, run `(sudo) chmod 777 ~/.vnc/xstartup` to change the previlege. Then the problem is solved.
+At last, run ` (sudo) chmod 777 ~/.vnc/xstartup ` to change the previlege. Then the problem is solved.
 
 Here we introduce some common *vncserver commands*:
 

@@ -2,7 +2,7 @@
 layout: post
 author: xiaoyu
 date: Tue Feb 28 10:26:48 2017
-category: post
+category: blog
 title: "CNN Image Retrieval Learns from BoW: Unsupervised Fine-Tuning with Hard Examples-Notes"
 tag:
 - unsupervised learning

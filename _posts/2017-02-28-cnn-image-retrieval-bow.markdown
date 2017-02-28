@@ -9,16 +9,16 @@ tag:
 - image retrieval
 - eccv 2017
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 0. From abstract: Fine tune classification task pre-trained CNN(AlexNet or VGG) for image retrieval with hard positive and hard negative examples learned from **3D reconstruction task**.
 
-    <font color=#ff1493>*Question*</font>: Why can reconstruction task provide clue for hard negative/positive example? How about choosing verification task or recognition task?
+    <span class="evidence">*Question*</span>: Why can reconstruction task provide clue for hard negative/positive example? How about choosing verification task or recognition task?
 
 1. Compare *Triplet Loss* and *Contrastive Loss*:
     0. In this paper the author chose *contrastive loss* because **generalize better and to converge at higher performance**
     1. Triplet Loss:
     2. Constrastive Loss:
-        $$L(i,j) = \frac{1}{2}(Y(i,j)||f(i)-f(j)||^2)$$
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">$$L(i,j) = \frac{1}{2}(Y(i,j)||f(i)-f(j)||^2)$$</script>
 2. 
 
 

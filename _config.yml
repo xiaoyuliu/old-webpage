@@ -103,6 +103,7 @@ show-author: true
 animation: true
 
 highlighter: rouge
+markdown: kramdown
 gems:
   - jekyll-seo-tag
   - jekyll-gist

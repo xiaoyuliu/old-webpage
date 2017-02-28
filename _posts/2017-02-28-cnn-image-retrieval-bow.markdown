@@ -9,7 +9,7 @@ tag:
 - image retrieval
 - eccv 2017
 ---
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 0. From abstract: Fine tune classification task pre-trained CNN(AlexNet or VGG) for image retrieval with hard positive and hard negative examples learned from **3D reconstruction task**.
 
     <font color=#ff1493>*Question*</font>: Why can reconstruction task provide clue for hard negative/positive example? How about choosing verification task or recognition task?

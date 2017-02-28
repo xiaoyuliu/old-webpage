@@ -18,7 +18,9 @@ tag:
     0. In this paper the author chose *contrastive loss* because **generalize better and to converge at higher performance**
     1. Triplet Loss:
     2. Constrastive Loss:
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">$$L(i,j) = \frac{1}{2}(Y(i,j)||f(i)-f(j)||^2)$$</script>
+        {% raw %}
+        $$L(i,j) = \frac{1}{2}(Y(i,j)||f(i)-f(j)||^2)$$
+        {% endraw %}
 2. 
 
 

@@ -19,11 +19,15 @@ tag:
     0. In this paper the author chose *contrastive loss* because **generalize better and to converge at higher performance**
     1. Triplet Loss:
         $$
+        \begin{align}
         L = \sum_i^N(||f(x^a)-f(x^p)||_2^2 - ||f(x^a)-f(x^n)||^2_2)
+        \end{align}
         $$
     2. Constrastive Loss:
         $$
+        \begin{align}
         L(i,j) = \frac{1}{2}(Y(i,j)||\overline(f)(i)-\overline(f)(j)||^2)+(1-Y(i,j))(\max\{0, \tau-||\overline(f)(i)-\overline(f)(j)||^2\})
+        \end{align}
         $$
         $$\tau$$ is able to exlude the influence of example when non-matching pairs have large enough distance.
 2. 

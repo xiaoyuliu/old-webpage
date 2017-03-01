@@ -1,6 +1,6 @@
 ---
 layout: post
-author: xiaoyu
+author: xiaoyuliu
 date: Tue Feb 28 10:26:48 2017
 category: blog
 title: "CNN Image Retrieval Learns from BoW: Unsupervised Fine-Tuning with Hard Examples-Notes"

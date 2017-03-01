@@ -25,7 +25,7 @@ tag:
     - Constrastive Loss:
     
         $$
-        L(i,j) = \frac{1}{2}(Y(i,j)||\overline(f)(i)-\overline(f)(j)||^2)+(1-Y(i,j))(\max\{0, \tau-||\overline(f)(i)-\overline(f)(j)||^2\})
+        L(i,j) = \frac{1}{2}(Y(i,j)||\overline{f}(i)-\overline{f}(j)||^2)+(1-Y(i,j))(\max\{0, \tau-||\overline{f}(i)-\overline{f}(j)||^2\})
         $$
 
         $$\tau$$ is able to exlude the influence of example when non-matching pairs have large enough distance.

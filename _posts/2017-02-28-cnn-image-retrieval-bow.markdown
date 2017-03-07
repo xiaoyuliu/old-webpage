@@ -10,7 +10,7 @@ tag:
 - eccv 2017
 ---
 
-0. From abstract: Fine tune classification task pre-trained CNN(AlexNet or VGG) for image retrieval with hard positive and hard negative examples learned from **3D reconstruction task**.
+0. From **abstract**: Fine tune classification task pre-trained CNN(AlexNet or VGG) for image retrieval with hard positive and hard negative examples learned from **3D reconstruction task**.
 
     <span class="evidence">*Question*</span>: Why can reconstruction task provide clue for hard negative/positive example? How about choosing verification task or recognition task?
 
@@ -32,7 +32,7 @@ tag:
 
     - >The triplet loss appears to be inferior in our context; we observe oscillation of the error in the validation set from early epochs, which implies over-fitting.
 
-2. >For a query image *q*, a pool *M(q)* of candidate **positive** images is constructed based on the camera positions in the cluster of *q*. It consists of the *k* images with closest camera centers to the query.
+2. > For a query image *q*, a pool *M(q)* of candidate **positive** images is constructed based on the camera positions in the cluster of *q*. It consists of the *k* images with closest camera centers to the query.
     
     To further sample postive example, three strategies are come up with in the paper:
 

@@ -10,7 +10,7 @@ tag:
 - segmentation
 ---
 
-### Advantage of fully convolutional networks
+### Contributions
 
 0. No need for patchwise training, faster and similar performance
 1. Be able to combine coarse, semantic information and shallow, fine information
@@ -39,7 +39,7 @@ tag:
 
     > Upsampling with factor $$f$$ is convolution with a fractional input stride of 1/$$f$$. So long as $$f$$ is integral, a natural way to upsample is therefore *backwards convolution* (sometimes called *deconvolution*) with an output stride of $$f$$ .
 
-    Using this method, we can upsample the reduced-sized output to the same size with input. And it can be done in-network for end-to-end learning.
+Using this method, we can upsample the reduced-sized output to the same size with input. And it can be done in-network for end-to-end learning.
 
 2. In-network upsampling is *fast* and *effective* in this paper, and the filter can be learned.
 

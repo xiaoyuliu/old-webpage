@@ -10,7 +10,7 @@ tag:
 - segmentation
 ---
 
-### 1 Contributions
+### Contributions
 
 0. No need for patchwise training, faster and similar performance
 1. Be able to combine coarse, semantic information and shallow, fine information

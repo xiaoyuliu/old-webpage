@@ -46,7 +46,7 @@ tag:
 #### Deep jet
 
 The output of upsampling the final pool layer is coarse like Figure 1, because the large pixel stride at the final prediction limits the scale of detail in it. 
-![refine comparision](https://cl.ly/3u2v0J0w1j42)
+![refine comparision](https://cl.ly/3u2v0J0w1j42/Image%202017-03-07%20at%202.48.13%20PM.png)
 <figcaption class="caption">Figure 1. Comparision between with deep jet and without</figcaption>
 So combining the final prediction layer with lower layers with finer strides(smaller strides) can produce finer segmentation result.
 
@@ -56,7 +56,7 @@ So combining the final prediction layer with lower layers with finer strides(sma
 
 ##### Exact way to do it
 
-![process of deep jet](https://cl.ly/0d1N2P3n3A1f)
+![process of deep jet](https://cl.ly/0d1N2P3n3A1f/Image%202017-03-07%20at%202.57.06%20PM.png)
 <figcaption class="caption">Figure 2. Details of how to implement deep jet</figcaption>
 
 Simply speaking, the author did a 2x upsampling to the output of a higher layer and fused the upsampled result with the output of a lower layer. Then upsampled the fused result to match the input's size, calculated the loss.

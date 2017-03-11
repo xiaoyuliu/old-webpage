@@ -27,7 +27,7 @@ tag:
 
 0. **Unmatched size between output and input**
 
-    0. Shift-and-stitch
+    -. Shift-and-stitch
 
         > If the outputs are downsampled by a factor of $$f$$ , the input is shifted (by left and top padding) $$x$$ pixels to the right and $$y$$ pixels down, once for every value of $$(x,y) \in \{0,...,f − 1\}×\{0,...,f − 1\}$$.
 
@@ -35,13 +35,13 @@ tag:
 
         Also we can decrease the stride of one convolutional/pooling layer from *s* to *1*, which causes upsampling the output by *s*, in this case we can adjust the filters and layer strides to keep size of output and input same. **However**, because *the original filter only sees a reduced prtion of its (now upsampled) input*. <span class="evidence">*Why?*</span> And there is still extended way to solve the problem.
 
-    1. Interpolation
+    -. Interpolation
 
         > Upsampling with factor $$f$$ is convolution with a fractional input stride of 1/$$f$$. So long as $$f$$ is integral, a natural way to upsample is therefore *backwards convolution* (sometimes called *deconvolution*) with an output stride of $$f$$ .
 
         Using this method, we can upsample the reduced-sized output to the same size with input. And it can be done in-network for end-to-end learning.
 
-    2. In-network upsampling is *fast* and *effective* in this paper, and the filter can be learned.
+    -. In-network upsampling is *fast* and *effective* in this paper, and the filter can be learned.
 
 1. **Deep Jet**
 

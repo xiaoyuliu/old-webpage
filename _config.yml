@@ -67,6 +67,7 @@ authors:
         bio: "O ever youthful, O ever weeping"
         external-image: false
         picture: assets/images/xiaoyu.jpg
+        facebook: xiaoyu.liu.353803
  
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -85,7 +86,7 @@ about: true
 blog: true
 
 # do you want to show the "read time" of the posts?
-read-time: true
+read-time: false
 
 # do you want to show the "tags" inside the posts?
 show-tags: true

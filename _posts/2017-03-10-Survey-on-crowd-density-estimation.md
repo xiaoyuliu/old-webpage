@@ -3,7 +3,7 @@ layout: post
 category: blog
 author: xiaoyuliu
 date: Fri Mar 10 15:03:34 2017
-title: 'Recent survey on crowd density estimation and counting for visual surveillanc - Notes'
+title: "Recent survey on crowd density estimation and counting for visual surveillanc - Notes"
 tag:
 - crowd density
 - EAAI 2015

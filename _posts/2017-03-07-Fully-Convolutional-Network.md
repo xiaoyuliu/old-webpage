@@ -29,17 +29,17 @@ tag:
 
     - Shift-and-stitch
 
-    > If the outputs are downsampled by a factor of $$f$$ , the input is shifted (by left and top padding) *x* pixels to the right and $$y$$ pixels down, once for every value of $$(x,y) \in \{0,...,f − 1\}×\{0,...,f − 1\}$$.
+        > If the outputs are downsampled by a factor of $$f$$ , the input is shifted (by left and top padding) *x* pixels to the right and $$y$$ pixels down, once for every value of $$(x,y) \in \{0,...,f − 1\}×\{0,...,f − 1\}$$.
 
-    We interlace $$f^2$$ outputs from $$f^2$$ shifted inputs to produce predictions correspond to the pixels at the *center* of their receptive fields.
+        We interlace $$f^2$$ outputs from $$f^2$$ shifted inputs to produce predictions correspond to the pixels at the *center* of their receptive fields.
 
-    Also we can decrease the stride of one convolutional/pooling layer from *s* to *1*, which causes upsampling the output by *s*, in this case we can adjust the filters and layer strides to keep size of output and input same. **However**, because *the original filter only sees a reduced prtion of its (now upsampled) input*. <span class="evidence">*Why?*</span> And there is still extended way to solve the problem.
+        Also we can decrease the stride of one convolutional/pooling layer from *s* to *1*, which causes upsampling the output by *s*, in this case we can adjust the filters and layer strides to keep size of output and input same. **However**, because *the original filter only sees a reduced prtion of its (now upsampled) input*. And there is still extended way to solve the problem.
 
     - Interpolation
 
-    > Upsampling with factor $$f$$ is convolution with a fractional input stride of 1/$$f$$. So long as $$f$$ is integral, a natural way to upsample is therefore *backwards convolution* (sometimes called *deconvolution*) with an output stride of $$f$$ .
+        > Upsampling with factor $$f$$ is convolution with a fractional input stride of 1/$$f$$. So long as $$f$$ is integral, a natural way to upsample is therefore *backwards convolution* (sometimes called *deconvolution*) with an output stride of $$f$$ .
 
-    Using this method, we can upsample the reduced-sized output to the same size with input. And it can be done in-network for end-to-end learning.
+        Using this method, we can upsample the reduced-sized output to the same size with input. And it can be done in-network for end-to-end learning.
 
     - In-network upsampling is *fast* and *effective* in this paper, and the filter can be learned.
 
@@ -50,9 +50,9 @@ The output of upsampling the final pool layer is coarse like Figure 1, because t
 <figcaption class="caption">Figure 1. Comparision between with deep jet and without</figcaption>
 So combining the final prediction layer with lower layers with finer strides(smaller strides) can produce finer segmentation result.
 
-> As they see fewer pixels, the finer scale predictions should need fewer layers, so it makes sense to make them from shallower net outputs.
+>  As they see fewer pixels, the finer scale predictions should need fewer layers, so it makes sense to make them from shallower net outputs.
 
-<span class="evidence">*Why?*</span>
+Here "finer scale" means more concentration on local feature, and shallower net outputs are more suitable for generating finer scale predictions because they pay attention to local regions instead of global images.
 
 ### Exact way to do it
 

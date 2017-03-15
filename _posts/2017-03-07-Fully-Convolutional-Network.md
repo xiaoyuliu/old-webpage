@@ -52,7 +52,7 @@ So combining the final prediction layer with lower layers with finer strides(sma
 
 >  As they see fewer pixels, the finer scale predictions should need fewer layers, so it makes sense to make them from shallower net outputs.
 
-Here "finer scale" means more concentration on local feature, and shallower net outputs are more suitable for generating finer scale predictions because they pay attention to local regions instead of global images.
+Here **"finer scale"** means more concentration on local feature, and shallower net outputs are more suitable for generating finer scale predictions because they pay attention to local regions instead of global images.
 
 ### Exact way to do it
 

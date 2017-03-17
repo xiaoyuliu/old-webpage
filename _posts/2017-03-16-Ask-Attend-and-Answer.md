@@ -23,7 +23,7 @@ tag:
 
     They both need to compute a scalar value according to input and candidate vector, and apply a softmax function to produce the attention weight for each candidate.
 
-    In this paper, the author chosed the *dop product* alignment function because "*concatenation*" alignment function does not yield good performance on the (neural machine translation task)[https://arxiv.org/abs/1508.04025]. 
+    In this paper, the author chosed the *dop product* alignment function because "*concatenation*" alignment function does not yield good performance on the [neural machine translation task](https://arxiv.org/abs/1508.04025). 
 
     <span class="evidence">Make sense?</span>
 

@@ -59,7 +59,11 @@ Here **"finer scale"** means more concentration on local feature, and shallower 
 ![process of deep jet](https://cl.ly/0d1N2P3n3A1f/Image%202017-03-07%20at%202.57.06%20PM.png)
 <figcaption class="caption">Figure 2. Details of how to implement deep jet</figcaption>
 
-Simply speaking, the author did a 2x upsampling to the output of a higher layer and fused the upsampled result with the output of a lower layer. Then upsampled the fused result to match the input's size, calculated the loss.
+Simply speaking, the author did a 2x upsampling to the output of a higher layer and fused the upsampled result with the output of a lower layer. Then upsampled the fused result to match the input's size, calculated the loss. And when fusing features inside the network, according to the paper：
+
+> Final layer deconvolutional filters are fixed to bilinear interpolation, while intermediate upsampling layers are initialized to bilinear upsampling, and then learned.
+
+Therefore, when using FCN-32s there's no fusing operation, and the final upsampling should be simply `torch.nn.UpsamplingBilinear2d` in `Pytorch`. And if you want to train this *deconv layer* you can use `torch.nn.ConvTranspose2d`. 
 
 
 

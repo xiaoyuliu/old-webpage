@@ -72,7 +72,8 @@ The author proved the ability of attention mechanism to learn spacial inference 
 
 Through comparison to other models, there are some interesting conclusions:
     
-- Deep features are much better!<div class="spoiler"><p>(This is apparently correct)</p></div>
+- Deep features are much better!
+<div class="spoiler"><p>This is apparently correct..</p></div>
 - iBOWIMG model has no spatial information because it did mean pooling.
 - SMem-VQA will fail while there are multiple objects belong to the same category.
 - Spatial attention is valuable.

@@ -52,16 +52,16 @@ tag:
 
 To simply describe what the network does: 
     - First align words and the corresponding embedded visual features, find regions related to `basket` and `cat` using two different embeddings. 
-    - Then generate the selected visual evidence vector $$S_att$$ based on spacial attention weights(related to `basket`) and evidence embedding(related to "cat"). Basically this step accumulates `cat` presence features at the `basket` location
-    - Finally combine $$S_att$$ and the question embedding $$Q$$(obtained using BOW) to predict the answer. 
+    - Then generate the selected visual evidence vector $$S_{att}$$ based on spacial attention weights(related to `basket`) and evidence embedding(related to "cat"). Basically this step accumulates `cat` presence features at the `basket` location
+    - Finally combine $$S_{att}$$ and the question embedding $$Q$$(obtained using BOW) to predict the answer. 
 
 Two embeddings are used: **"attention"** embedding $$W_A$$, **"evidence"** embedding $$W_E$$. 
 
 $$W_A$$ is for generating spacial _attention weights_ at each location using word-guided atttention process in (b). Each word vector will separately select a related region with the highest correlation value, which provide more fine-grained attention. 
 
-$$W_E$$ is responsible for detecting the presence of semantic concepts or objects that can be used as the "evidence" of the answer. And the embedding results are multiplied with *attention weights* and summed over all locations to generate the visual evidence vector $$S_att$$.
+$$W_E$$ is responsible for detecting the presence of semantic concepts or objects that can be used as the "evidence" of the answer. And the embedding results are multiplied with *attention weights* and summed over all locations to generate the visual evidence vector $$S_{att}$$.
 
-So far, the One-Hop model has been completed. But in the first hop, **all the words are utilized separately and only local evidence is provided, a way to extract additional correlated visual features to the whole question is needed**. Then the author came up with Two-Hop model, which made use of $$S_att$$ and $$Q$$ generated in the previous hop to update the question vector. The question vector will take place of the individual word vectors in hop 1, and everything should be updated accordingly.
+So far, the One-Hop model has been completed. But in the first hop, **all the words are utilized separately and only local evidence is provided, a way to extract additional correlated visual features to the whole question is needed**. Then the author came up with Two-Hop model, which made use of $$S_{att}$$ and $$Q$$ generated in the previous hop to update the question vector. The question vector will take place of the individual word vectors in hop 1, and everything should be updated accordingly.
 
 ### Result
 

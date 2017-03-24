@@ -39,6 +39,7 @@ tag:
     The paper didn't provide result using *concatenation* alignment function.
 
 2. Compared Models:
+
     - ACK model: Feed the generated image caption and relevant external knowledge as input to a LSTM.
     - DPPnet model: Learn a CNN with some parameters predicted from a seperate network, which utilizes Gate Recurrent Unit to generate a quesition representation. Based on the input question, it maps the predicted weights to CNN needed to be learned via hashing.
 
@@ -51,9 +52,10 @@ tag:
 <figcaption class="caption">Fig.1 Spatial Memory Nework for Visual Question Answering(SMem-VQA)</figcaption>
 
 To simply describe what the network does: 
-    - First align words and the corresponding embedded visual features, find regions related to `basket` and `cat` using two different embeddings. 
-    - Then generate the selected visual evidence vector $$S_{att}$$ based on spacial attention weights(related to `basket`) and evidence embedding(related to "cat"). Basically this step accumulates `cat` presence features at the `basket` location
-    - Finally combine $$S_{att}$$ and the question embedding $$Q$$(obtained using BOW) to predict the answer. 
+
+- First align words and the corresponding embedded visual features, find regions related to `basket` and `cat` using two different embeddings. 
+- Then generate the selected visual evidence vector $$S_{att}$$ based on spacial attention weights(related to `basket`) and evidence embedding(related to "cat"). Basically this step accumulates `cat` presence features at the `basket` location
+- Finally combine $$S_{att}$$ and the question embedding $$Q$$(obtained using BOW) to predict the answer. 
 
 Two embeddings are used: **"attention"** embedding $$W_A$$, **"evidence"** embedding $$W_E$$. 
 

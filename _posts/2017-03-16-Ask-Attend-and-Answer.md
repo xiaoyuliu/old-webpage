@@ -34,9 +34,7 @@ tag:
 
     In this paper, the author chosed the *dop product* alignment function because "*concatenation*" alignment function does not yield good performance on the [neural machine translation task](https://arxiv.org/abs/1508.04025). 
 
-    <span class="evidence">Make sense? And what's the difference between **soft** attention mechanism and the other?</span>
-
-    The paper didn't provide result using *concatenation* alignment function.
+    The paper didn't provide result using *concatenation* alignment function. And the difference between *soft attention mechanism* and *hard* is the attention weights are continously real value between 0 and 1 in *soft attention machanism*, while *hard* generates weights as 0 or 1 only.
 
 2. Compared Models:
 

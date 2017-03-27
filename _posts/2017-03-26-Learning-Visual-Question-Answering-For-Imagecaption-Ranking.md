@@ -16,16 +16,16 @@ This paper focused on ultilizing pre-trained VQA model as a **feature extraction
 
 0. **Formulation and Loss Function**
 
-Retrieve relevant images given a query caption, and relevant captions given a query image. When training, the input is ($$I,C$$), image and caption pair, with $$K-1$$ sample images and $$K-1$$ random captions, then the target for the network is 
+    Retrieve relevant images given a query caption, and relevant captions given a query image. When training, the input is ($$I,C$$), image and caption pair, with $$K-1$$ sample images and $$K-1$$ random captions, then the target for the network is 
 
-- **Retrieving $$I$$ from *K* captions given *C* **
-- **Retrieving $$C$$ from *K* images given *I* **
+    - **Retrieving $$I$$ from *K* captions given *C* **
+    - **Retrieving $$C$$ from *K* images given *I* **
 
-The paper uses the sum of two expected negative log-likelihoods of image and caption retrieval over all image-caption pairs(*I,C*):
+    The paper uses the sum of two expected negative log-likelihoods of image and caption retrieval over all image-caption pairs(*I,C*):
 
-$$
-L(\theta) = E_{(I,C)}[-logP_{im}(I|C)] + E_{(I,C)}[-logP_{cap}(C|I)]
-$$
+    $$
+    L(\theta) = E_{(I,C)}[-logP_{im}(I|C)] + E_{(I,C)}[-logP_{cap}(C|I)]
+    $$
 
 1. **VQA-agnostic Models**
 

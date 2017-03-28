@@ -31,7 +31,7 @@ This paper focused on ultilizing pre-trained VQA model as a **feature extraction
 
     In VQA-agnostic models for image-caption ranking, there's no prior knowledge utilized from VQA corpora. They use a vectorized image representation, which is the hidden layer activation from an image classification pretrained CNN; and a vectorized caption representation, which is namely the encoded sentence using an RNN.
 
-    This kind of structure requires a high volume of training image-caption ranking dataset to learn the necessary knowledge. The state-of-the-art VQA-agnostic model for image-caption ranking task is also treated as (baseline)[1] in the paper. It projects image representation and sentence representation into feature space of the same dimension as sentence representation, and scoring function is the dot product between the embedded unit-norm vectors.
+    This kind of structure requires a high volume of training image-caption ranking dataset to learn the necessary knowledge. The state-of-the-art VQA-agnostic model for image-caption ranking task is also treated as [baseline][1] in the paper. It projects image representation and sentence representation into feature space of the same dimension as sentence representation, and scoring function is the dot product between the embedded unit-norm vectors.
 
 2. **VQA-grounded Models**
 
@@ -47,18 +47,21 @@ This paper focused on ultilizing pre-trained VQA model as a **feature extraction
 
     ![fusion](https://cl.ly/1k0R1L41062m/Image%202017-03-27%20at%207.41.28%20PM.png)
     <caption>Two fusion strategies</caption>
+
     - Score-level fusion:
         + First compute score according to two models separately
         + Fuse two scores using two parameters
         To be noticed, the fusion parameters are learned based on validation set in case of overfitting.
+
     - Representation-level fusion
+    
         + First compute image and caption representations in two models
         + Fuse them using several parameters
         These parameters are learned on training set.
 
 ### Results
 
-Both score-level and representation-level fusion are better than VQA-agnostic state-of-the-art, which proves the effectiveness of VQA corpora in improving image-caption ranking performance. And among them, representation-level fusion is slightly better than score-level, 
+Both score-level and representation-level fusion are better than VQA-agnostic state-of-the-art, which proves the effectiveness of VQA corpora in improving image-caption ranking performance. And among them, representation-level fusion is slightly better than score-level, I guess it's because representation-level fusion model has one more layer.
 
 
 

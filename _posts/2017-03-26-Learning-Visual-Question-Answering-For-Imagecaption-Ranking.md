@@ -46,7 +46,7 @@ This paper focused on ultilizing pre-trained VQA model as a **feature extraction
 3. **Fuse Two Models**
 
     ![fusion](https://cl.ly/1k0R1L41062m/Image%202017-03-27%20at%207.41.28%20PM.png)
-    <caption>Two fusion strategies</caption>
+    <figcaption class="caption">Two fusion strategies</figcaption>
 
     - Score-level fusion:
         + First compute score according to two models separately

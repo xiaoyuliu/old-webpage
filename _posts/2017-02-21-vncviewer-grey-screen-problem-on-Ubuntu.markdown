@@ -12,7 +12,7 @@ category: blog
 
 After setting up successfully the vncserver on your Ubuntu machine, a common problem is the grey screen and "X" pointer in vncviewer.
 
-This problem is caused by there is no desktop running while running the vncserver, so there is going to show nothing. According to [this page](https://www.htcp.net/880.html), a simple solution is to edit the file `~/.vnc/xstartup` by simply replacing the content with
+This problem is caused by there is no desktop running while running the vncserver, so there is going to show nothing. A simple solution is to edit the file `~/.vnc/xstartup` by simply replacing the content with
     
     #!/bin/sh 
     # Uncomment the following two lines for normal desktop:

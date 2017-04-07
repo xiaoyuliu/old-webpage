@@ -22,5 +22,17 @@ In multi-task learning, it aimes at learning all the *source* and *target* tasks
 
 In transfer learning, it aimes at extracting knowledge from *source* tasks and applying to a *target* task, it cares *target* more.
 
+### Definition
+
+There are two tasks in all learning procedures, *source* task and *target* task, each is composed of a feature space *X* and a marginal probability distribution *P* over the feature space. 
+
+In traditional machine learning problem, $$X_S = X_T$$ and $$P(Y_S|X_S) = P(Y_T|X_S)$$, source task and target task share the same input feature space and marginal probability distribution. Take document classification as an example, input feature space can be treated as language used in the document, marginal probability distribution is considered as topic of the document. As contrarary, in transfer learning, either $$X_S \neq X_T$$ or $$P(Y_S|X_S) \neq P(Y_T|X_S)$$, which means either the language in the document is not the same or the documents are for different topics.
+
+
+
+
+
+
+
 
 [1]: https://cl.ly/0R1l0620011Q/Image%202017-04-02%20at%205.42.26%20PM.png

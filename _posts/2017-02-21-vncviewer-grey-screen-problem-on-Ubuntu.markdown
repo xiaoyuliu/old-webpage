@@ -40,6 +40,13 @@ This will return a connection address with a port number.
 
 The PID of each connection will be stored in `~/.vnc/xxxxx:x.pid` file, **DO NOT** delete .pid file unless you want to kill the connection by yourself.
 
+### The following procedure is expecially for connecting computers in VML lab via VNC outside campus
+
+1. `ssh -L 5901:cs-vml-ID_OF_MACHINE.cs.sfu.ca:5901 USER_ID@rcg-linux-ts1.rcg.sfu.ca` and enter your password to make
+an SSH tunnel.
+2. In your VNC client software, connect to 127.0.0.1:1.
+3. If port 5901 is occupied, try `5902` and `127.0.0.1:2` till you successfully connect.
+
 
 
 

@@ -27,4 +27,4 @@ The structure of 3-col CNN is pretty simple and straightforward to understand, t
 - The intention of multi-col design is for addressing heads of different sizes, increasing the network's robustness to different situations. 
 - There is no fully-connected layer inside MCNN, which is flexible to inputs of different sizes.  
 - Before convolving with the final $$1x1$$ conv layer, feature maps from 3 networks are concatenated together. It should be noted that all feature maps before concatenating share the same size only different number of channels, so they can be concatenated.
-- During training, the output density map is of $$[\frac(W)(4), \frac(H)(4)]$$. In order to calculate loss, the author downsampled the original input to of the same size with output, then generated corresponding ground truth density map. Finally, they use Euclidean distance as training loss.
+- During training, the output density map is of $$[\frac{W}{4}, \frac{H}{4}]$$. In order to calculate loss, the author downsampled the original input to of the same size with output, then generated corresponding ground truth density map. Finally, they use Euclidean distance as training loss.

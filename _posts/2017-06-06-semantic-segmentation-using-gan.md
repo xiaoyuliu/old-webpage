@@ -21,6 +21,7 @@ This paper utilized Generative Adversarial Network(GAN) to learn higher-order in
 ### Adversatial training
 
 0. **Loss function**:
+
     $$
     l(\theta_s, \theta_a) = \sum_{n=1}^{N}l_{mce}(s(x_n), y_n) - \lambda[l_{bce}(a(x_n, y_n),1) + l_{bce}(a(x_n,s(x_n)),0)]
     $$

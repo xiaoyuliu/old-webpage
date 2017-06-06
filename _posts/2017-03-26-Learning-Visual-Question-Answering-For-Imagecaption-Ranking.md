@@ -35,8 +35,22 @@ This paper focused on ultilizing pre-trained VQA model as a **feature extraction
 
 2. **VQA-grounded Models**
 
-    Because there are two different tasks in image-caption ranking, the author takes advantage of **VQA model** to provide caption retrieval needed probability $$P_{I}(A|Q,I)$$
+    Because there are two different tasks in image-caption ranking, the author takes advantage of **VQA model** to provide caption retrieval needed probability 
+    $$
+    P_I(A|Q,I)
+    $$
+    , and **VQA-Caption model** to provide image retrieval needed probability $$
+    P_C(A|Q,C)
+    $$.
 
+    Here, VQA-Caption takes a caption and a question about the same image, then generates an answer.
+
+    And it is worthy to notice, in 
+    $$
+    P_I(A_i||Q_i, I_i)
+    $$ if the *question* is "What is the man wearing on his head?" and correct *answer* is "Helmet", **even if there is no person present in the image or mentioned in the caption, the model may still assess the plausibility of a man wearing a helmet**.
+
+    But when using VQA-grounded models only, the sentence structure of caption and image saliency will lose, so the author proposed two strateges to fuse VQA-agnostic and VQA-grounded models.
 3. **Fuse Two Models**
 
     ![fusion](https://cl.ly/1k0R1L41062m/Image%202017-03-27%20at%207.41.28%20PM.png)

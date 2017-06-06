@@ -35,7 +35,7 @@ This paper focused on ultilizing pre-trained VQA model as a **feature extraction
 
 2. **VQA-grounded Models**
 
-    Because there are two different tasks in image-caption ranking, the author takes advantage of **VQA model** to provide caption retrieval needed probability $$P_I(A|Q,I)$$
+    Because there are two different tasks in image-caption ranking, the author takes advantage of **VQA model** to provide caption retrieval needed probability $$P_{I}(A|Q,I)$$
 
 3. **Fuse Two Models**
 

@@ -8,7 +8,7 @@ tag:
 - ubuntu
 ---
 
-I spent a whole day to figure out the simplest way to install these things.
+Spent a whole day to figure out the way to safely install these things.
 
 ### Install GTX 1070 driver
 

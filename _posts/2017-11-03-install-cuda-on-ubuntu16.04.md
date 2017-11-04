@@ -14,7 +14,7 @@ Spent a whole day to figure out the way to safely install these things.
 
 There are two different ways to install the driver:
 
-0. Install through `.run` file from [this link][1]
+0. Install through `.run` file from [this link](1)
 
     Simply speaking:
 
@@ -52,7 +52,7 @@ There are two different ways to install the driver:
     **However, my Ubuntu system broke down when trying this method. There came lots of strange problems like I can't use my pinyin input and my system can't locate *update* package. Therefore I chose the second way to install nvidia driver.**
 
 
-1. According to [this answer][2]:
+1. According to [this answer](2):
 
     There is a compiled driver that already supports GTX 1070, which is 367.
 
@@ -100,7 +100,7 @@ There are two different ways to install the driver:
 ### Install cuDNN 5.1
 
 - Download the corresponding 
--  on [the official website][3], registration required
+-  on [the official website](3), registration required
 - After extracting, `cd` to the folder and run
     ```
     sudo cp cuda/include/cudnn.h /usr/local/cuda-8.0/include

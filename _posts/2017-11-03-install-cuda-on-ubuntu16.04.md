@@ -14,11 +14,8 @@ Spent a whole day to figure out the way to safely install these things.
 
 There are two different ways to install the driver:
 
-0. Install through `.run` file from [this link](1)
-
-    Simply speaking:
-
-    + Ban built-in *nouveau* driver
+0. Install through `.run` file from [this link][1]
+    - Ban built-in *nouveau* driver
         ```
         Ctrl + Alt + F1
         //input your user id and password
@@ -34,7 +31,7 @@ There are two different ways to install the driver:
         ```
 
 
-    + Install GTX 1070 driver
+    - Install GTX 1070 driver
         Download the corresponding `.run` file through the link above
 
         ```
@@ -49,13 +46,12 @@ There are two different ways to install the driver:
         nvidia-smi //success if return gpu information
         ```
 
-    **However, my Ubuntu system broke down when trying this method. There came lots of strange problems like I can't use my pinyin input and my system can't locate *update* package. Therefore I chose the second way to install nvidia driver.**
+        **However, my Ubuntu system broke down when trying this method. There came lots of strange problems like I can't use my pinyin input and my system can't locate *update* package. Therefore I chose the second way to install nvidia driver.**
 
 
-1. According to [this answer](2):
+1. According to [this answer][2]:
 
     There is a compiled driver that already supports GTX 1070, which is 367.
-
     So we can simply using:
 
     ```
@@ -79,6 +75,7 @@ There are two different ways to install the driver:
     + y
 - There will be some `warning` sentences but they don't matter
 - Set PATH:
+
     + `sudo vi /etc/profile`
     + Insert:
     ```
@@ -100,7 +97,7 @@ There are two different ways to install the driver:
 ### Install cuDNN 5.1
 
 - Download the corresponding 
--  on [the official website](3), registration required
+-  on [the official website][3], registration required
 - After extracting, `cd` to the folder and run
     ```
     sudo cp cuda/include/cudnn.h /usr/local/cuda-8.0/include
@@ -111,6 +108,6 @@ There are two different ways to install the driver:
     sudo ldconfig 
     ```
 
-[1]https://www.geforce.com/drivers
-[2]https://askubuntu.com/questions/791439/trouble-installing-ubuntu-16-04-since-i-got-gtx-1070
-[3]https://developer.nvidia.com/cuda-downloads
+[1]: https://www.geforce.com/drivers
+[2]: https://askubuntu.com/questions/791439/trouble-installing-ubuntu-16-04-since-i-got-gtx-1070
+[3]: https://developer.nvidia.com/cuda-downloads

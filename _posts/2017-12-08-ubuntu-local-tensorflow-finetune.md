@@ -12,7 +12,6 @@ tag:
 #### This is simply a record for my own use to fine-tune a pre-trained tensorflow model on 6 subcategories of MSCOCO dataset.
 
 0. Prepare dataset 
-
     I use the code from [Xitao Zhang's github repository][1] and modify `create_coco_tf_record.py`:
 
     ```
@@ -39,7 +38,6 @@ tag:
     Follow the instruction of installation and running from the repo. Then you can get the `train.record` and `eval.record`. For training, I produced only the `train.record`.
 
 1. Train the model
-
     - Download a pre-trained model from [detection_model_zoo][2]
     - Object detection training pipeline: I modify one from `/path/to/pretrainedModels/faster_rcnn_resnet50_lowproposals_coco_2017_11_08/pipeline.config`, simply changing `num_classes`, `fine_tune_checkpoint`, `num_steps`, `label_map_path` and `tf_record_input_reader/input_path`.
     - Use the following command to train

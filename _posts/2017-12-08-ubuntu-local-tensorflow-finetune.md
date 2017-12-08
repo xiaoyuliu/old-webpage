@@ -5,8 +5,8 @@ title: "Fine-tune pre-trained model on a MSCOCO subset using Tensorflow locally"
 author: xiaoyuliu
 date: Fri Dec 8 10:13:48 2017
 tag:
--- tensorflow
--- Ubuntu
+- tensorflow
+- Ubuntu
 ---
 
 #### This is simply a record for my own use to fine-tune a pre-trained tensorflow model on 6 subcategories of MSCOCO dataset.

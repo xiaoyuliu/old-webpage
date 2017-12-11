@@ -34,6 +34,8 @@ tag:
             labels.append(5)
         elif category_id == 8:
             labels.append(6)
+    if len(labels) == 0:
+        continue
     ```
 
     Follow the instruction of installation and running from the repo. Then you can get the `train.record` and `eval.record`. For training, I produced only the `train.record`.
@@ -79,7 +81,8 @@ tag:
     2. Add flag `--num_clones=GPU_NUMBER --ps_tasks=1` at then end of training command
 5. ##### Remote Tensorboard
     
-    Train the model on the server and view the training process by tensorboard locally using:
+    0. Run Tensorboard on the server by `tensorboard --logdir=${PATH_TO_MODEL_DIRECTORY}`
+    1. Train the model on the server and view the training process by tensorboard locally using:
     ```
     ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
     ```

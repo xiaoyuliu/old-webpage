@@ -9,9 +9,10 @@ tag:
 - Ubuntu
 ---
 
-#### This is simply a record for my own use to fine-tune a pre-trained tensorflow model on 6 subcategories of MSCOCO dataset.
+##### This is simply a record for my own use to fine-tune a pre-trained tensorflow model on 6 subcategories of MSCOCO dataset.
 
-0. Prepare dataset 
+0. ##### Prepare dataset 
+
     I use the code from [Xitao Zhang's github repository][1] and modify `create_coco_tf_record.py`:
 
     ```
@@ -37,7 +38,8 @@ tag:
 
     Follow the instruction of installation and running from the repo. Then you can get the `train.record` and `eval.record`. For training, I produced only the `train.record`.
 
-1. Train the model
+1. ##### Train the model
+
     0. Download a pre-trained object detection model from [detection_model_zoo][2] or a classification model from [classification_model_zoo][4]
     1. Create an object detection training pipeline.config file: I modify one from `/path/to/pretrainedModels/faster_rcnn_resnet50_lowproposals_coco_2017_11_08/pipeline.config`, simply changing `num_classes`, `fine_tune_checkpoint`, `num_steps`, `label_map_path` and `tf_record_input_reader/input_path`.
     2. Set the correct value for **from_detection_checkpoint**. If you are fine-tuning from a pre-trained object detection model, set it to *true*; if from a classification pre-trained model, set it to *false*
@@ -50,7 +52,8 @@ tag:
         --pipeline_config_path=${PATH_TO_YOUR_PIPELINE_CONFIG}
     ```
 
-2. Export the trained model
+2. ##### Export the trained model
+
     After training, you can get a bunch of strange files that endwith '.ckpt' and a file named `checkpoint`, to export the trained model to a Tensorflow graph proto, run the [provided script][3]:
     ```
     # From tensorflow/models/research/
@@ -62,7 +65,7 @@ tag:
     ```
 
 3. Finally you can get a graph named `output_inference_graph.pb`
-4. Test the model locally using `object_detection_tutorial.py` in `tensorflow/models/research/object_detction`, you can generate the `.py` file from `.ipynb` through Jupyter notebook. Modify the following parts:
+4. **Test the model locally** using `object_detection_tutorial.py` in `tensorflow/models/research/object_detction`, you can generate the `.py` file from `.ipynb` through Jupyter notebook. Modify the following parts:
     - PATH_TO_CKPT
     - PATH_TO_LABELS
     - NUM_CLASSES
@@ -70,11 +73,13 @@ tag:
 
     You can also set different `min_score_thresh` inside the function `vis_util.visualize_boxes_and_labels_on_image_array`.
 
-5. In order to train the model using multiple GPUs:
+5. In order to train the model using **multiple GPUs**:
     0. Specify the ids of GPUs you want to assign by adding `CUDA_VISIBLE_DEVICES=id1,id2,id3,...` at the beginning of training command. This is in case of random GPU assignment by Tensorflow.
     1. Modify `batch_size: GPU_NUMBER` in `pipeline.config` file
     2. Add flag `--num_clones=GPU_NUMBER --ps_tasks=1` at then end of training command
-5. Train the model on the server and view the training process by tensorboard locally using:
+5. ##### Remote Tensorboard
+    
+    Train the model on the server and view the training process by tensorboard locally using:
     ```
     ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
     ```

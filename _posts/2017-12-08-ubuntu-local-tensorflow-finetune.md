@@ -38,9 +38,10 @@ tag:
     Follow the instruction of installation and running from the repo. Then you can get the `train.record` and `eval.record`. For training, I produced only the `train.record`.
 
 1. Train the model
-    - Download a pre-trained model from [detection_model_zoo][2]
-    - Object detection training pipeline: I modify one from `/path/to/pretrainedModels/faster_rcnn_resnet50_lowproposals_coco_2017_11_08/pipeline.config`, simply changing `num_classes`, `fine_tune_checkpoint`, `num_steps`, `label_map_path` and `tf_record_input_reader/input_path`.
-    - Use the following command to train
+    0. Download a pre-trained object detection model from [detection_model_zoo][2] or a classification model from [classification_model_zoo][4]
+    1. Create an object detection training pipeline.config file: I modify one from `/path/to/pretrainedModels/faster_rcnn_resnet50_lowproposals_coco_2017_11_08/pipeline.config`, simply changing `num_classes`, `fine_tune_checkpoint`, `num_steps`, `label_map_path` and `tf_record_input_reader/input_path`.
+    2. Set the correct value for **from_detection_checkpoint**. If you are fine-tuning from a pre-trained object detection model, set it to *true*; if from a classification pre-trained model, set it to *false*
+    3. Use the following command to train
     ```
     # From the tensorflow/models/research/ directory
     python object_detection/train.py \
@@ -69,6 +70,18 @@ tag:
 
     You can also set different `min_score_thresh` inside the function `vis_util.visualize_boxes_and_labels_on_image_array`.
 
+5. In order to train the model using multiple GPUs:
+    0. Specify the ids of GPUs you want to assign by adding `CUDA_VISIBLE_DEVICES=id1,id2,id3,...` at the beginning of training command. This is in case of random GPU assignment by Tensorflow.
+    1. Modify `batch_size: GPU_NUMBER` in `pipeline.config` file
+    2. Add flag `--num_clones=GPU_NUMBER --ps_tasks=1` at then end of training command
+5. Train the model on the server and view the training process by tensorboard locally using:
+    ```
+    ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
+    ```
+
+    Then open http://127.0.0.1:16006/ on the local machine, fantastic!
+
 [1]: https://github.com/offbye/tensorflow_object_detection_create_coco_tfrecord/
 [2]: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
 [3]: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md
+[4]: https://github.com/tensorflow/models/tree/master/research/slim

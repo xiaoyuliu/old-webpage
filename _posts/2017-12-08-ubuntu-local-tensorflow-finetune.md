@@ -87,13 +87,17 @@ tag:
     ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
     ```
     Then open http://127.0.0.1:16006/ on the local machine, fantastic!
-    
+
 7. #### Different Model Saving Strategy
     
     During the training procedure, the operation of saving a model is wrapped in Tensorflow official scripts, and the training api only provides a parameter related to saving the model `save_interval_secs: How often, in seconds, to save the model to 'logdir'`. I cannot achieve the target to save the model every *N* iterations, and can only save the model every *N* seconds. Here is how to do it:
+
     - `/path/to/tensorflow/models/research/object_detection/trainer.py: slim.learning.train`, add `save_interval_secs=WHATEVER_YOU_WANT`. The default value is 600, which means every 10 minutes a model will be saved
     - `/path/to/tensorflow/models/research/object_detection/trainer.py: f.train.Saver`, add `max_to_keep=WHATEVER_YOU_WANT`. The default value is 5, which means only the latest 5 checking points(trained models) will be saved
     - `pipeline.config: eval_config`, set `max_evals=WHATEVER_YOU_WANT(max_to_keep)`. The default value is 10, which means the evaluation script will evaluate only the first 10 checking points and exits.
+
+    <span class="evidence">Anyone knows how to save the model according to training steps please contact me! :)</span>
+
 
 [1]: https://github.com/offbye/tensorflow_object_detection_create_coco_tfrecord/
 [2]: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md

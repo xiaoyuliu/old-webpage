@@ -9,9 +9,9 @@ tag:
 - Ubuntu
 ---
 
-##### This is simply a record for my own use to fine-tune a pre-trained tensorflow model on 6 subcategories of MSCOCO dataset.
+#### This is simply a record for my own use to fine-tune a pre-trained tensorflow model on 6 subcategories of MSCOCO dataset.
 
-0. ##### Prepare dataset 
+0. #### Prepare dataset 
 
     I use the code from [Xitao Zhang's github repository][1] and modify `create_coco_tf_record.py`:
 
@@ -40,7 +40,7 @@ tag:
 
     Follow the instruction of installation and running from the repo. Then you can get the `train.record` and `eval.record`. For training, I produced only the `train.record`.
 
-1. ##### Train the model
+1. #### Train the model
 
     0. Download a pre-trained object detection model from [detection_model_zoo][2] or a classification model from [classification_model_zoo][4]
     1. Create an object detection training pipeline.config file: I modify one from `/path/to/pretrainedModels/faster_rcnn_resnet50_lowproposals_coco_2017_11_08/pipeline.config`, simply changing `num_classes`, `fine_tune_checkpoint`, `num_steps`, `label_map_path` and `tf_record_input_reader/input_path`.
@@ -54,7 +54,7 @@ tag:
         --pipeline_config_path=${PATH_TO_YOUR_PIPELINE_CONFIG}
     ```
 
-2. ##### Export the trained model
+2. #### Export the trained model
 
     After training, you can get a bunch of strange files that endwith '.ckpt' and a file named `checkpoint`, to export the trained model to a Tensorflow graph proto, run the [provided script][3]:
     ```
@@ -79,15 +79,21 @@ tag:
     0. Specify the ids of GPUs you want to assign by adding `CUDA_VISIBLE_DEVICES=id1,id2,id3,...` at the beginning of training command. This is in case of random GPU assignment by Tensorflow.
     1. Modify `batch_size: GPU_NUMBER` in `pipeline.config` file
     2. Add flag `--num_clones=GPU_NUMBER --ps_tasks=1` at then end of training command
-5. ##### Remote Tensorboard
+6. #### Remote Tensorboard
     
     0. Run Tensorboard on the server by `tensorboard --logdir=${PATH_TO_MODEL_DIRECTORY}`
     1. Train the model on the server and view the training process by tensorboard locally using:
     ```
     ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
     ```
-
     Then open http://127.0.0.1:16006/ on the local machine, fantastic!
+    
+7. #### Different Model Saving Strategy
+    
+    During the training procedure, the operation of saving a model is wrapped in Tensorflow official scripts, and the training api only provides a parameter related to saving the model `save_interval_secs: How often, in seconds, to save the model to 'logdir'`. I cannot achieve the target to save the model every *N* iterations, and can only save the model every *N* seconds. Here is how to do it:
+    - `/path/to/tensorflow/models/research/object_detection/trainer.py: slim.learning.train`, add `save_interval_secs=WHATEVER_YOU_WANT`. The default value is 600, which means every 10 minutes a model will be saved
+    - `/path/to/tensorflow/models/research/object_detection/trainer.py: f.train.Saver`, add `max_to_keep=WHATEVER_YOU_WANT`. The default value is 5, which means only the latest 5 checking points(trained models) will be saved
+    - `pipeline.config: eval_config`, set `max_evals=WHATEVER_YOU_WANT(max_to_keep)`. The default value is 10, which means the evaluation script will evaluate only the first 10 checking points and exits.
 
 [1]: https://github.com/offbye/tensorflow_object_detection_create_coco_tfrecord/
 [2]: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md

@@ -86,7 +86,8 @@ tag:
     ```
     ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
     ```
-    Then open http://127.0.0.1:16006/ on the local machine, fantastic!
+        Then open http://127.0.0.1:16006/ on the local machine, fantastic!
+    2. If you meet the error *Tried to connect to port 6006, but address is in use*, type `ps aux | grep tensorboard` to list PIDs of processes of tensorboard and kill the process you don't want
 
 7. #### Different Model Saving Strategy
     

@@ -15,7 +15,7 @@ tag:
 
     I use the code from [Xitao Zhang's github repository][1] and modify `create_coco_tf_record.py`:
 
-    ```
+    ```py
     LABELS_EXPECTED = {1,2,3,4,6,8}
 
     for ann in anns:
@@ -46,7 +46,7 @@ tag:
     1. Create an object detection training pipeline.config file: I modify one from `/path/to/pretrainedModels/faster_rcnn_resnet50_lowproposals_coco_2017_11_08/pipeline.config`, simply changing `num_classes`, `fine_tune_checkpoint`, `num_steps`, `label_map_path` and `tf_record_input_reader/input_path`.
     2. Set the correct value for **from_detection_checkpoint**. If you are fine-tuning from a pre-trained object detection model, set it to *true*; if from a classification pre-trained model, set it to *false*
     3. Use the following command to train
-    ```
+    ```sh
     # From the tensorflow/models/research/ directory
     python object_detection/train.py \
         --logtostderr \
@@ -57,7 +57,7 @@ tag:
 2. #### Export the trained model
 
     After training, you can get a bunch of strange files that endwith '.ckpt' and a file named `checkpoint`, to export the trained model to a Tensorflow graph proto, run the [provided script][3]:
-    ```
+    ```sh
     # From tensorflow/models/research/
     python object_detection/export_inference_graph.py \
         --input_type image_tensor \
@@ -83,7 +83,7 @@ tag:
     
     0. Run Tensorboard on the server by `tensorboard --logdir=${PATH_TO_MODEL_DIRECTORY}`
     1. Train the model on the server and view the training process by tensorboard locally using:
-    ```
+    ```sh
     ssh -L 16006:127.0.0.1:6006 -p PORT SERVER_NAME@SERVER_ADDRESS
     ```
         Then open http://127.0.0.1:16006/ on the local machine, fantastic!

@@ -54,6 +54,23 @@ tag:
         --pipeline_config_path=${PATH_TO_YOUR_PIPELINE_CONFIG}
     ```
 
+2. #### Test the model along training
+
+    To use CPU for evaluation, at the beginning of the eval.py script you can set the CUDA_VISIBLE_DEVICES to empty [in the following way][https://github.com/tensorflow/models/issues/2225]:
+    ```python
+    import os
+    os.environ["CUDA_VISIBLE_DEVICES"]=""
+    ```
+    
+    ```sh
+    # From the tensorflow/models/research/ directory
+    python object_detection/eval.py \
+    --logtostderr \
+    --checkpoint_dir=${PATH_TO_TRAIN_DIR} \
+    --pipeline_config_path=${PATH_TO_YOUR_PIPELINE_CONFIG} \
+    --eval_dir=${PATH_TO_EVAL_DIR}
+    ```
+
 2. #### Export the trained model
 
     After training, you can get a bunch of strange files that endwith '.ckpt' and a file named `checkpoint`, to export the trained model to a Tensorflow graph proto, run the [provided script][3]:
@@ -67,7 +84,7 @@ tag:
     ```
 
 3. Finally you can get a graph named `output_inference_graph.pb`
-4. **Test the model locally** using `object_detection_tutorial.py` in `tensorflow/models/research/object_detction`, you can generate the `.py` file from `.ipynb` through Jupyter notebook. Modify the following parts:
+4. **Run demo locally** using `object_detection_tutorial.py` in `tensorflow/models/research/object_detction`, you can generate the `.py` file from `.ipynb` through Jupyter notebook. Modify the following parts:
     - PATH_TO_CKPT
     - PATH_TO_LABELS
     - NUM_CLASSES

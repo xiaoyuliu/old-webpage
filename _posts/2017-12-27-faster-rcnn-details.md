@@ -81,7 +81,7 @@ tag:
 
     Soft-NMS means treating the score as a function of IOU, so the bbox with the lower score will not be deleted directly. There are two ways achieving the target, *Linear Function* and *Gaussian Function*. [More details][5].
 
-    According to the paper, on MSCOCO dataset, `mAP@[0.5:0.95]` can be increased by around `1%`.
+    According to the paper, on MSCOCO dataset, `mAP@[0.5:0.95]` of R-FCN and Faster RCNN models can be increased by around `1%`.
 
 3. TBD
 

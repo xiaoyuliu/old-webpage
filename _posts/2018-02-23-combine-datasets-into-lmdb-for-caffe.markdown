@@ -133,7 +133,9 @@ Take the combination fo [MSCOCO][1] and [UA-DETRAC][2] as an example in this art
     Annotation/train2017TXT/XXXXXXXXXXXX.txt
     Annotation/val2017TXT/XXXXXXXXXXXX.txt
     ```
+    
     The content of every `.txt` file is:
+
         ```
         # [label] [x1] [y1] [x2] [y2]
         1 0.0 104.98 500.0 370.61
@@ -147,6 +149,7 @@ Take the combination fo [MSCOCO][1] and [UA-DETRAC][2] as an example in this art
     ImageSets/val.txt
     ```
     The content of `train.txt` file is:
+
         ```
         MVI_20011/imgXXXXX.jpg
         MVI_20011/imgXXXXX.jpg
@@ -157,16 +160,20 @@ Take the combination fo [MSCOCO][1] and [UA-DETRAC][2] as an example in this art
         train2017/XXXXXXXXXXXX.jpg
         ...
         ```
+
         **NO** `val2017` images are included in `train.txt`
 
     The content of `val.txt` file is:
+
         ```
         val2017/XXXXXXXXXXXX.jpg
         ...
         ```
+
         **NO** `train2017` or `MVI_200XX` images are included in `val.txt`
 
 8. Generate `train.txt` and `val.txt` files indicating relationships between each single image and the corresponding annotation file under `/PATH/TO/CAFFE/data/coco`. The content should be like:
+
     ```
     # train.txt
     JPEGImages/MVI_XXXXX/imgXXXXX.jpg Annotations/MVI_XXXXX.xml-anno/annoXXXXX.txt
@@ -178,6 +185,7 @@ Take the combination fo [MSCOCO][1] and [UA-DETRAC][2] as an example in this art
     JPEGImages/val2017/XXXXXXXXXXXX.jpg Annotations/val2017TXT/XXXXXXXXXXXX.txt
     ...
     ```
+
     Similarly, **NO** `train2017` or `MVI_200XX` images are included in `val.txt` and **NO** `val2017` images are included in `train.txt`.
 
 8. Generate LMDB
@@ -188,7 +196,9 @@ Take the combination fo [MSCOCO][1] and [UA-DETRAC][2] as an example in this art
         - mapfile: /PATH/TO/CAFFE/data/coco/${maplabelfile}
         - label_type: "txt"
         - `for subset in val train`
+    
     Run the script and it will create lmdb files for train, val with encoded original image:
+
         ```
         /PATH/TO/CAFFE/data/coco/lmdb/coco_val_lmdb
         /PATH/TO/CAFFE/data/coco/lmdb/coco_train_lmdb

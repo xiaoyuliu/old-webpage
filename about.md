@@ -9,13 +9,19 @@ layout: page
 
 Xiaoyu graduated as a Computing Science master student from **Simon Fraser University** (2015.09 - 2017.08), supervised by [Prof. Greg Mori](https://www.cs.sfu.ca/~mori/). And she earned her Bachelor’s degrees in Engineering from **University of Science and Technology of China** (2011.09 - 2015.06). 
 
-## Skills
+## Program Languages
 - Java/JavaScript
 - Python
 - C/C++
 - HTML/CSS
 - Matlab
-- MySQL
+- SQL
+
+## Platforms
+- Caffe
+- Tensorflow
+- PyTorch
+- MXNet
 
 ## Interests
 - Hiking

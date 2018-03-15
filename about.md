@@ -28,4 +28,10 @@ Xiaoyu graduated as a Computing Science master student from **Simon Fraser Unive
 - Cooking
 - Singing
 
+## *Speciality*
+**Have rich experience in sleeping in public transportations**:
+- Bus: Proficient
+- SkyTrain/Subtrain: Skilled
+- Flight: Experienced
+
 [1]: http://www.altumview.com/

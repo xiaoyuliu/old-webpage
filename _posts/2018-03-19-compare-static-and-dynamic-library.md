@@ -85,3 +85,21 @@ To generate an executable file, the source file will go through *pre-compile*, *
         + During running, the dynamic libraries must be kept while running
         + Save memory because there will be only one copy for the shared dynamic library for programs using it in the memory
         + When the library is updated, all customers need to update is simply the dynamic library.
+
+- **Combine Multiple Static Libraries**
+    
+    ```bash
+    # under LINUX
+    ar x libA.a
+    ar x libB.a
+    ar cur libAB.a *.o
+    ranlib libAB.a
+    ```
+
+- **Combine Multiple Dynamic Libraries**
+
+    ```bash
+    # under LINUX, do not test this yet
+    # have to compile the dynamic libraries into static libraries and use this command to combine them into a .so file
+    gcc -shared -o c.so -Wl,--whole-archive a.a b.a -Wl,--no-whole-archive
+    ```

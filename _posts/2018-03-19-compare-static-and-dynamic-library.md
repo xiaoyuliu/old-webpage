@@ -10,14 +10,14 @@ tag:
 - Windows
 ---
 
-This articile is based on the Chinese version [blog][http://www.cnblogs.com/skynet/p/3372855.html] introducing static libraries and dynamic libraries.
+This articile is based on the Chinese version [blog](http://www.cnblogs.com/skynet/p/3372855.html) introducing static libraries and dynamic libraries.
 
 ### Definition of Library
 
 A library is a collection of off-the-shelf scripts that can be used repeatedly. Basically it is the binary mode of executable codes and can be loaded into the operation system to run. There are two kinds of libraries on LINUX and WINDOWS:
     
-    - *Static library*: `.a` for LINUX, `.lib` for WINDOWS
-    - *Dynamic library*: `.so` for LINUX, `.dll` for WINDOWS
+- *Static library*: `.a` for LINUX, `.lib` for WINDOWS
+- *Dynamic library*: `.so` for LINUX, `.dll` for WINDOWS
 
 To generate an executable file, the source file will go through *pre-compile*, *compile*, *assemble* and *link*. `.a/.lib` and `.so/.dll` comes from *link* stage.
 
@@ -25,7 +25,7 @@ To generate an executable file, the source file will go through *pre-compile*, *
     
     A static library can be simply treated as a set of `.o/.obj` files. It can be linked together with `.o/.obj` files from *aseemble* to generate the executable file. 
 
-    Static libraries increase the size of the code in your binary. They're always loaded and whatever version of the code you compiled with is the version of the code that will run. (from the [answer][https://stackoverflow.com/questions/140061/when-to-use-dynamic-vs-static-libraries])
+    Static libraries increase the size of the code in your binary. They're always loaded and whatever version of the code you compiled with is the version of the code that will run. (from the [answer](https://stackoverflow.com/questions/140061/when-to-use-dynamic-vs-static-libraries))
 
     - **Generate Static Library**
     

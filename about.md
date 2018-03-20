@@ -2,8 +2,6 @@
 title: About
 layout: page
 ---
-![Profile Image][{{ site.url }}/{{ xiaoyu.jpg }}]
-
 ## Bio
 **Xiaoyu Liu** is a Deep Learning Researcher at [Altumview][1]. 
 

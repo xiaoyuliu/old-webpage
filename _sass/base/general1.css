@@ -9,10 +9,11 @@ Error: Undefined variable: "$fontSans".
 5: 	line-height: 1
 6: 	font: 16px $fontSans
 7: 	color: $alpha
-8: 
-9: h1, h2, h3, h4
-10: 	font-family: $fontSans
-11: 	color: $beta
+8:  word-spacing: 5px
+9:
+10: h1, h2, h3, h4
+11: 	font-family: $fontSans
+12: 	color: $beta
 
 Backtrace:
 /Users/xiaoyu/Documents/xiaoyuliu.github.io/_sass/base/general1.sass:6
@@ -66,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$fontSans\".\A         on line 6 of /Users/xiaoyu/Documents/xiaoyuliu.github.io/_sass/base/general1.sass\A \A 1: body, html\A 2: 	font-size: 62.5%\A 3: \A 4: body\A 5: 	line-height: 1\A 6: 	font: 16px $fontSans\A 7: 	color: $alpha\A 8: \A 9: h1, h2, h3, h4\A 10: 	font-family: $fontSans\A 11: 	color: $beta"; }
+  content: "Error: Undefined variable: \"$fontSans\".\A         on line 6 of /Users/xiaoyu/Documents/xiaoyuliu.github.io/_sass/base/general1.sass\A \A 1: body, html\A 2: 	font-size: 62.5%\A 3: \A 4: body\A 5: 	line-height: 1\A 6: 	font: 16px $fontSans\A 7: 	color: $alpha\A 8: word-spacing: 5px\A 9: \A 10: h1, h2, h3, h4\A 11: 	font-family: $fontSans\A 12: 	color: $beta"; }

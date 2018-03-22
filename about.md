@@ -2,10 +2,12 @@
 title: About
 layout: page
 ---
-<link rel="stylesheet" type="text/css" href="_layouts/about.css">
+<!-- <link rel="stylesheet" type="text/css" href="_layouts/about.css">
 <div class="center">
     <img src='assets/images/xiaoyu.jpg'>
-</div>
+</div> -->
+
+![Profile Image]({{ site.url }}/{{ site.picture }})
 
 ## Bio
 **Xiaoyu Liu** is a Deep Learning Researcher at [Altumview][1]. 

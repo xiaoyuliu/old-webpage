@@ -2,6 +2,11 @@
 title: About
 layout: page
 ---
+<link rel="stylesheet" type="text/css" href="_layouts/about.css">
+<div class="center">
+    <img src='assets/images/xiaoyu.jpg'>
+</div>
+
 ## Bio
 **Xiaoyu Liu** is a Deep Learning Researcher at [Altumview][1]. 
 
@@ -28,6 +33,7 @@ Xiaoyu graduated as a Computing Science master student from **Simon Fraser Unive
 
 ## *Speciality*
 **Have rich experience in sleeping in public transportations**:
+
 - Bus: Proficient
 - SkyTrain/Subtrain: Skilled
 - Flight: Experienced

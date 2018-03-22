@@ -1,0 +1,18 @@
+.pagination {
+  width: 95%;
+  margin: 3rem auto 0;
+  text-align: center; }
+  .pagination > .page_number {
+    display: inline-block;
+    font-size: 1.3rem; }
+  .pagination > .previous,
+  .pagination > .next {
+    display: inline-block;
+    font-size: 1.8rem;
+    position: relative;
+    top: 1px;
+    padding: 1px 9px; }
+  .pagination > .hidden {
+    visibility: hidden; }
+
+/*# sourceMappingURL=pagination.css.map */

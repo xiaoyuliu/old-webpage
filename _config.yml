@@ -1,6 +1,6 @@
 # main text of home
 name: Xiaoyu Liu
-bio: Deep Learning Researcher @ Altumview
+bio: Deep Learning Researcher @ AltumView
 
 # twitter summary info
 description: Work, life clips
@@ -38,7 +38,7 @@ facebook: xiaoyu.liu.353803
 # google: mygoogle
 instagram: xiaoyu_liu_shirley
 # pinterest: mypinterest
-# linkedin: mylinkedin
+linkedin: xiaoyu-liu-25b90096
 # youtube: myyoutube
 # spotify: myspotify
 github: xiaoyuliu
@@ -50,18 +50,6 @@ github: xiaoyuliu
 email: xiaoyuliu1993 [at] gmail.com
 
 authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
-        external-image: false
-        picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
     xiaoyuliu:
         name: Xiaoyu Liu
         bio: "O ever youthful, O ever weeping"
@@ -104,7 +92,9 @@ show-author: true
 animation: true
 
 highlighter: rouge
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 gems:
   - jekyll-seo-tag
   - jekyll-gist

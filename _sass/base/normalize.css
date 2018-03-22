@@ -5,6 +5,7 @@
  */
 html {
   font-family: sans-serif;
+  word-spacing: 5px;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */

@@ -92,9 +92,9 @@ show-author: true
 animation: true
 
 highlighter: rouge
-markdown: redcarpet
-redcarpet:
-  extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+# markdown: redcarpet
+# redcarpet:
+#   extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 gems:
   - jekyll-seo-tag
   - jekyll-gist
